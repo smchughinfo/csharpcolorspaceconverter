@@ -73,10 +73,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(12, 168);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(374, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(382, 20);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "The other conversion are \"tested\" in this color picker";
+            this.linkLabel1.Text = "The other conversions are \"tested\" in this color picker";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lblRGB
