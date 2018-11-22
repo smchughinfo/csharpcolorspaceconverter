@@ -20,11 +20,16 @@ namespace ColorSpaceConverterTester
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            var colorVals = ColorSpaceConverter.RGBToHSL();
-            var color = Color.FromArgb(colorVals.Item1, colorVals.Item2, colorVals.Item3);
+            var colorVals = ColorSpaceConverter.RGBToHSL(200, 100, 40);
+            var color = Color.FromArgb(colorVals[0], colorVals[1], colorVals[2]);
             pnlRGBToHSL1.BackColor = color;
             pnlRGBToHSL2.BackColor = color;
             pnlRGBToHSL3.BackColor = color;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/smchughinfo/color");
         }
     }
 }
