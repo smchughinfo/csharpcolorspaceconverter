@@ -4,11 +4,11 @@ namespace CSharpColorSpaceConverter
 {
     public static class ColorSpaceConverter
     {
-        public static int[] RGBToHSL(int r, int g, int b)
+        public static double[] RGBToHSL(int r, int g, int b)
         {
-            double R = r / 255;
-            double G = g / 255;
-            double B = b / 255;
+            double R = r / 255d;
+            double G = g / 255d;
+            double B = b / 255d;
 
             double min = Math.Min(R, Math.Min(G, B));
             double max = Math.Max(R, Math.Max(G, B));
@@ -16,13 +16,13 @@ namespace CSharpColorSpaceConverter
 
             double H = 0;
             double S = 0;
-            double L = (min + max) / 2;
+            double L = (min + max) / 2d;
 
             if (deltaMax != 0)
             {
                 if (L < .5)
                 {
-                    S = deltaMax / (max + max);
+                    S = deltaMax / (max + min);
                 }
                 else
                 {
@@ -30,9 +30,9 @@ namespace CSharpColorSpaceConverter
                 }
             }
 
-            double deltaR = (((max - R) / 6) + (max / 2)) / deltaMax;
-            double deltaG = (((max - G) / 6) + (max / 2)) / deltaMax;
-            double deltaB = (((max - B) / 6) + (max / 2)) / deltaMax;
+            double deltaR = (((max - R) / 6d) + (max / 2d)) / deltaMax;
+            double deltaG = (((max - G) / 6d) + (max / 2d)) / deltaMax;
+            double deltaB = (((max - B) / 6d) + (max / 2d)) / deltaMax;
 
             if (R == max)
             {
@@ -40,20 +40,17 @@ namespace CSharpColorSpaceConverter
             }
             else if (G == max)
             {
-                H = (1 / 3) + deltaR - deltaB;
+                H = (1 / 3d) + deltaR - deltaB;
             }
             else if (B == max)
             {
-                H = (2 / 3) + deltaG - deltaR;
+                H = (2 / 3d) + deltaG - deltaR;
             }
 
-            var h = Convert.ToInt32(H);
-            var s = Convert.ToInt32(S);
-            var l = Convert.ToInt32(L);
-            return new int[] { h, s, l };
+            return new double[] { H, S, L };
         }
 
-        public static void HSLToRGB(int h, int s, int l)
+        public static int[] HSLToRGB(double h, double s, double l)
         {
             double R = 0;
             double G = 0;
@@ -78,10 +75,15 @@ namespace CSharpColorSpaceConverter
                 }
                 double var1 = 2 * l - var2;
 
-                R = 255 * HueToRGB(var1, var2, h + (1 / 3));
+                R = 255 * HueToRGB(var1, var2, h + (1 / 3d));
                 G = 255 * HueToRGB(var1, var2, h);
-                B = 255 * HueToRGB(var1, var2, h - (1 / 3));
+                B = 255 * HueToRGB(var1, var2, h - (1 / 3d));
             }
+
+            int r = Convert.ToInt32(R);
+            int g = Convert.ToInt32(G);
+            int b = Convert.ToInt32(B);
+            return new int[] { r, g, b };
         }
 
         static double HueToRGB(double v1, double v2, double vH)
@@ -104,7 +106,7 @@ namespace CSharpColorSpaceConverter
             }
             if ((3 * vH) < 2)
             {
-                return (v1 + (v2 - v1) * ((2 / 3) - vH) * 6);
+                return (v1 + (v2 - v1) * ((2 / 3d) - vH) * 6);
             }
             return v1;
         }

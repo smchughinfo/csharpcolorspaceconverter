@@ -33,6 +33,8 @@
             this.pnlRGBToHSL3 = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblRGB = new System.Windows.Forms.Label();
+            this.lblHSL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlRGBToHSL1
@@ -77,11 +79,31 @@
             this.linkLabel1.Text = "The other conversion are \"tested\" in this color picker";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lblRGB
+            // 
+            this.lblRGB.AutoSize = true;
+            this.lblRGB.Location = new System.Drawing.Point(331, 12);
+            this.lblRGB.Name = "lblRGB";
+            this.lblRGB.Size = new System.Drawing.Size(94, 20);
+            this.lblRGB.TabIndex = 5;
+            this.lblRGB.Text = "RGB (0,0,0)";
+            // 
+            // lblHSL
+            // 
+            this.lblHSL.AutoSize = true;
+            this.lblHSL.Location = new System.Drawing.Point(331, 42);
+            this.lblHSL.Name = "lblHSL";
+            this.lblHSL.Size = new System.Drawing.Size(90, 20);
+            this.lblHSL.TabIndex = 6;
+            this.lblHSL.Text = "HSL (0,0,0)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 205);
+            this.ClientSize = new System.Drawing.Size(493, 205);
+            this.Controls.Add(this.lblHSL);
+            this.Controls.Add(this.lblRGB);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.pnlRGBToHSL3);
@@ -102,6 +124,8 @@
         private System.Windows.Forms.Panel pnlRGBToHSL3;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblRGB;
+        private System.Windows.Forms.Label lblHSL;
     }
 }
 

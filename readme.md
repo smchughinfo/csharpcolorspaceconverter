@@ -13,7 +13,7 @@
 
 **SOURCE**
 
-* http://www.easyrgb.com
+* http://www.easyrgb.com/en/math.php
 * http://www.cambiaresearch.com/c4/24c09e15-2941-4ad2-8695-00b1b4029f4d/Convert-dotnet-Color-to-Hex-String.aspx
 
 **NOTES**
