@@ -23,7 +23,9 @@
 * http://www.cambiaresearch.com/c4/24c09e15-2941-4ad2-8695-00b1b4029f4d/Convert-dotnet-Color-to-Hex-String.aspx
 
 **NUGET**
- 1.0.0`
+ 
+`Install-Package csharpcolorspaceconverter -Version 1.0.0`
+ 
 
 **JUST GIVE ME THE FILE PLEASE**
 
