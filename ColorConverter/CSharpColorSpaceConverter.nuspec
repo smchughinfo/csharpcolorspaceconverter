@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ColorSpaceConverter</id>
+    <version>1.0.0</version>
+    <title>Color Space Converter</title>
+    <authors>smchughinfo</authors>
+    <owners>smchughinfo</owners>
+    <iconUrl>https://raw.githubusercontent.com/smchughinfo/csharpcolorspaceconverter/master/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Convert colors from one color space to another. Find the closest "named" color.</description>
+    <projectUrl>https://github.com/smchughinfo/csharpcolorspaceconverter</projectUrl>
+    <tags>color color-space color-conversion named-colors</tags>
+  </metadata>
+</package>
