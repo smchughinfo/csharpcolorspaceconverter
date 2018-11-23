@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>ColorsSpaceConverter</id>
-    <version>1.0.1</version>
+    <id>ColorSpaceConverter</id>
+    <version>1.0.0</version>
     <title>Color Space Converter</title>
     <authors>smchughinfo</authors>
     <owners>smchughinfo</owners>
