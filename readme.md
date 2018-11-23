@@ -13,7 +13,7 @@
 **EXAMPLE USAGE**
 
     using CSharpColorSpaceConverter;
-    var color = ColorSpaceConverter.RGBToNamedColor(114, 193, 102);
+    var color = ColorSpaceConverter.RGBToNamedColor(111, 190, 107);
     Console.WriteLine(color);
     > Mantis (114, 193, 102)
 
