@@ -24,7 +24,7 @@
 
 **NUGET**
  
-`Install-Package csharpcolorspaceconverter -Version 1.0.0`
+`PM> Install-Package ColorsSpaceConverter -Version 1.0.1`
  
 
 **JUST GIVE ME THE FILE PLEASE**
