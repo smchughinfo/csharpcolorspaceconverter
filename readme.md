@@ -10,11 +10,23 @@
 * HSL -> RGB
 * XYZ -> Lab
 
+**EXAMPLE USAGE**
+
+    using CSharpColorSpaceConverter;
+    var color = ColorSpaceConverter.RGBToNamedColor(114, 193, 102);
+    Console.WriteLine(color);
+    > Mantis (114, 193, 102)
 
 **SOURCE**
 
 * http://www.easyrgb.com/en/math.php
 * http://www.cambiaresearch.com/c4/24c09e15-2941-4ad2-8695-00b1b4029f4d/Convert-dotnet-Color-to-Hex-String.aspx
+
+**NUGET**
+    Install-Package csharpcolorspaceconverter -Version 1.0.0 
+
+**JUST GIVE ME THE FILE PLEASE**
+You got it boss: [https://github.com/smchughinfo/csharpcolorspaceconverter/blob/master/ColorConverter/ColorSpaceConverter.cs](https://github.com/smchughinfo/csharpcolorspaceconverter/blob/master/ColorConverter/ColorSpaceConverter.cs)
 
 **NOTES**
 * The list of named colors was scraped from Wikipedia around 2013. 
@@ -22,4 +34,4 @@
 
 **ABOUT**
 
- Over the years I've had to keep going back to easyrgb.com to lookup these conversions[[1]](https://github.com/smchughinfo/color)[[2]](https://github.com/smchughinfo/resilientalgorithm) so I decided to put them into a repository.
+ Over the years I've had to keep going back to easyrgb.com to lookup these conversions so I decided to put them into a repository.
