@@ -24,7 +24,7 @@
 
 **NUGET**
  
-`PM> Install-Package ColorSpaceConverter -Version 1.0.0`
+`PM> Install-Package ColorSpaceConverter -Version 1.0.1`
  
 
 **JUST GIVE ME THE FILE PLEASE**
