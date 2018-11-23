@@ -23,12 +23,14 @@
 * http://www.cambiaresearch.com/c4/24c09e15-2941-4ad2-8695-00b1b4029f4d/Convert-dotnet-Color-to-Hex-String.aspx
 
 **NUGET**
-    Install-Package csharpcolorspaceconverter -Version 1.0.0 
+ 1.0.0`
 
 **JUST GIVE ME THE FILE PLEASE**
-You got it boss: [https://github.com/smchughinfo/csharpcolorspaceconverter/blob/master/ColorConverter/ColorSpaceConverter.cs](https://github.com/smchughinfo/csharpcolorspaceconverter/blob/master/ColorConverter/ColorSpaceConverter.cs)
+
+You got it boss: [ColorSpaceConverter.cs](https://github.com/smchughinfo/csharpcolorspaceconverter/blob/master/ColorConverter/ColorSpaceConverter.cs)
 
 **NOTES**
+
 * The list of named colors was scraped from Wikipedia around 2013. 
 * Not all conversions may appear accurate. I'm not sure how it works. I just copied the code. Something about lighting.
 
