@@ -244,9 +244,8 @@ namespace CSharpColorSpaceConverter
                 var curNamedColor = RGBToLab(curNamedColorRgb.R, curNamedColorRgb.G, curNamedColorRgb.B);
 
                 var curDistance = GetDistance(
-                   curPointerColor[0], curNamedColor[0],
-                   curPointerColor[1], curNamedColor[1],
-                   curPointerColor[2], curNamedColor[2]
+                   curPointerColor[0], curPointerColor[1], curPointerColor[2],
+                   curNamedColor[0], curNamedColor[1], curNamedColor[2]
                 );
 
                 if (minDistance > curDistance)
@@ -259,23 +258,12 @@ namespace CSharpColorSpaceConverter
             return names[minIndex] + (valuesOnSecondLine ? System.Environment.NewLine : " ") +  "(" + namesR[minIndex] + "," + namesG[minIndex] + "," + namesB[minIndex] + ")";
         }
 
-
-        /// <summary>
-        /// Get the distance between two Lab colors.
-        /// </summary>
-        /// <param name="l1">Color1.L</param>
-        /// <param name="l2">Color2.L</param>
-        /// <param name="a1">Color1.a</param>
-        /// <param name="a2">Color2.a</param>
-        /// <param name="b1">Color1.b</param>
-        /// <param name="b2">Color2.b</param>
-        /// <returns></returns>
-        public static double GetDistance(double l1, double l2, double a1, double a2, double b1, double b2)
+        public static double GetDistance(double color1L, double color1A, double color1B, double color2L, double color2A, double color2B)
         {
             return Math.Sqrt(
-               Math.Pow(l1 - l2, 2) +
-               Math.Pow(a1 - a2, 2) +
-               Math.Pow(b1 - b2, 2)
+               Math.Pow(color1L - color2L, 2) +
+               Math.Pow(color1A - color2A, 2) +
+               Math.Pow(color1B - color2B, 2)
             );
         }
     }
