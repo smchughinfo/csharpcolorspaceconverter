@@ -259,7 +259,18 @@ namespace CSharpColorSpaceConverter
             return names[minIndex] + (valuesOnSecondLine ? System.Environment.NewLine : " ") +  "(" + namesR[minIndex] + "," + namesG[minIndex] + "," + namesB[minIndex] + ")";
         }
 
-        static double GetDistance(double l1, double l2, double a1, double a2, double b1, double b2)
+
+        /// <summary>
+        /// Get the distance between two Lab colors.
+        /// </summary>
+        /// <param name="l1">Color1.L</param>
+        /// <param name="l2">Color2.L</param>
+        /// <param name="a1">Color1.a</param>
+        /// <param name="a2">Color2.a</param>
+        /// <param name="b1">Color1.b</param>
+        /// <param name="b2">Color2.b</param>
+        /// <returns></returns>
+        public static double GetDistance(double l1, double l2, double a1, double a2, double b1, double b2)
         {
             return Math.Sqrt(
                Math.Pow(l1 - l2, 2) +
