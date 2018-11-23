@@ -34,7 +34,11 @@ namespace CSharpColorSpaceConverter
             double deltaG = (((max - G) / 6d) + (max / 2d)) / deltaMax;
             double deltaB = (((max - B) / 6d) + (max / 2d)) / deltaMax;
 
-            if (R == max)
+            if(deltaMax == 0)
+            {
+                H = 0;
+            }
+            else if (R == max)
             {
                 H = deltaB - deltaG;
             }
