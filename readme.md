@@ -33,10 +33,8 @@ You got it boss: [ColorSpaceConverter.cs](https://github.com/smchughinfo/csharpc
 
 **NOTES**
 
-* The list of named colors was scraped from Wikipedia around 2013. 
-* Not all conversions may appear accurate. I'm not sure how it works. I just copied the code. Something about lighting.
-* If you are looking for a color picker that gives named colors I have one [here](https://github.com/smchughinfo/color).
-
+* The list of named colors was scraped from Wikipedia around 2013.
+  
 **ABOUT**
 
  Over the years I've had to keep going back to easyrgb.com to lookup these conversions so I decided to put them into a repository.
